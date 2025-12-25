@@ -17,8 +17,14 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-  <nav>
+  <nav role="navigation" aria-label="Hauptnavigation">
     <ul>
+      <li id="logo">    
+        <figure style="margin: 0;">
+          <img src="img/logo.png" alt="Logo" aria-hidden="true">
+          <figcaption style="font-size:0.9em; color:#333;">Maretyui</figcaption>
+        </figure>
+      </li>
       <li><a href="#">Start</a></li>
       <li><a href="#">Über</a></li>
       <li><a href="#">Blog</a></li>
@@ -29,8 +35,8 @@
   <header role="banner">
     <h1>Die unendliche Welt von HTML5</h1>
   </header>
-  <main>
-    <section>
+  <main role="main">
+    <section role="region" aria-label="Einführung in HTML5">
       <h2>Lasst uns loslegen</h2>
       <p>HTML5 ist die neueste Version der Hypertext Markup Language, die das Rückgrat des World Wide Web bildet. Es bringt viele neue Funktionen und Verbesserungen mit sich, die das Web-Erlebnis für Benutzer und Entwickler gleichermaßen bereichern.</p>
       <h3>Neue Elemente</h3>
@@ -62,7 +68,7 @@
       <h3>Videoeinbettung</h3>
       <article>
         <h4>U-Bahn Clip</h4>
-        <video width="450" height="337" controls>
+        <video width="450" height="337" controls aria-hidden="true">
           <source src="img/u-bahn.mp4" type="video/mp4">
           <source src="img/u-bahn.ogv" type="video/ogg">
           Ihr Browser unterstützt leider das Video-Element nicht!
@@ -70,7 +76,7 @@
       </article>
       <h3>Grafiken und Animationen</h3>
       <p>Das &lt;canvas&gt; Element ermöglicht es Entwicklern, dynamische Grafiken und Animationen direkt im Browser zu erstellen, was neue Möglichkeiten für interaktive Anwendungen eröffnet.</p>
-    <canvas id="Canvas" width="350" height="100">
+    <canvas id="Canvas" width="350" height="100" aria-label="Canvas mit meinen Initialen">
       <p>Ihr Browser unterstützt leider das canvas-Element nicht!</p>
     </canvas>
 
