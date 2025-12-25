@@ -26,10 +26,56 @@
       <li><a href="#">Kontakt</a></li>
     </ul>
   </nav>
-  <header>
+  <header role="banner">
     <h1>Die unendliche Welt von HTML5</h1>
   </header>
   <main>
+    <section>
+      <h2>Lasst uns loslegen</h2>
+      <p>HTML5 ist die neueste Version der Hypertext Markup Language, die das Rückgrat des World Wide Web bildet. Es bringt viele neue Funktionen und Verbesserungen mit sich, die das Web-Erlebnis für Benutzer und Entwickler gleichermaßen bereichern.</p>
+      <h3>Neue Elemente</h3>
+      <p>HTML5 führt neue semantische Elemente wie &lt;article&gt;, &lt;section&gt;, &lt;nav&gt; und &lt;header&gt; ein, die es einfacher machen, den Inhalt einer Webseite zu strukturieren und zu verstehen.</p>
+      <h3>Formulare und Eingaben</h3>
+      <article>
+        <p>HTML5 verbessert die Formularerstellung mit neuen Eingabetypen wie "email", "date" und "range", die die Benutzerfreundlichkeit erhöhen und die Validierung erleichtern.</p>
+        <form>
+          <label for="search">Suchanfrage:</label>
+          <input type="search" id="search" name="search" placeholder="Begriff" autofocus>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Maik Reinhardt">
+          <label for="volume">Lautstärke (%):</label>
+          <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+          <label for="age">Alter:</label>
+          <input type="number" id="age" name="age" min="0" max="120" value="25">
+          <label for="color">Farbschema:</label>
+          <input list="colors" id="color" name="color">
+          <datalist id="colors">
+            <option value="Rot">
+            <option value="Blau">
+            <option value="Grün">
+            <option value="Gelb">
+            <option value="Schwarz">
+          </datalist>
+          <button type="submit">Absenden</button>
+        </form>
+      </article>
+      <h3>Videoeinbettung</h3>
+      <article>
+        <h4>U-Bahn Clip</h4>
+        <video width="450" height="337" controls>
+          <source src="img/u-bahn.mp4" type="video/mp4">
+          <source src="img/u-bahn.ogv" type="video/ogg">
+          Ihr Browser unterstützt leider das Video-Element nicht!
+        </video>
+      </article>
+      <h3>Grafiken und Animationen</h3>
+      <p>Das &lt;canvas&gt; Element ermöglicht es Entwicklern, dynamische Grafiken und Animationen direkt im Browser zu erstellen, was neue Möglichkeiten für interaktive Anwendungen eröffnet.</p>
+    <canvas id="Canvas" width="350" height="100">
+      <p>Ihr Browser unterstützt leider das canvas-Element nicht!</p>
+    </canvas>
+
+
+    </section>
   </main>
   <footer>
     <a href="https://maretyui.com" target="_blank" rel="noopener noreferrer">&copy; 2025 Maretyui</a>
