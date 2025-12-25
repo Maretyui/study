@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body>* {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+h1, h2 {
+    margin:0;
+}
+body {
+    font: 120% sans-serif;
+    max-width: 60rem;
+    margin: auto;
+    
+}
+
+.navi ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+
+/* MARKER */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-primary: rgb(0, 65, 87);
+    --bg-nav: rgb(116, 190, 199);
+    --bg-aside: rgb(44, 133, 141);
+    --bg-article: rgb(255, 255, 203);
+    --bg-body: rgb(143, 203, 143);
+    --text-primary: rgb(34, 34, 34);
+    --text-secondary: rgb(251, 253, 200);
+    --text-hover: rgb(190, 205, 203);
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "navi   navi"
+        "aside  article"
+        "footer footer";
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    background-color: var(--bg-body);
+}
+
+header {
+    grid-area: header;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+nav.navi {
+    grid-area: navi;
+    background-color: var(--bg-nav);
+    color: var(--text-primary);
+    height: fit-content;
+    > ul{
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        > li a{
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.4rem;
+        }
+        > li.kontakt{
+            margin-left: auto;
+        }
+        > li a:hover{
+            background-color: var(--text-primary);
+            border-radius: 0.25rem;
+            color: var(--text-hover);
+            padding: .4rem;
+            transition: ease-in-out .3s;
+        }
+    }
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(44, 133, 141);
+    color: rgb(251, 253, 200);
+}
+
+article {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+    background-color: var(--bg-article);   
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+@media (max-width: 35em) {
+    body{
+        display: block;
+    }
+    nav.navi ul{
+        display: block;
+        > li{
+            margin-bottom: 1rem;
+        }
+    }
+}
