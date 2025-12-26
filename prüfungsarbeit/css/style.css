@@ -1,0 +1,21 @@
+.navbar {
+    background: #414141;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.footer {
+    border: 2px solid #f7ab47;
+}
+
+body {
+    overflow-y: scroll;
+}
