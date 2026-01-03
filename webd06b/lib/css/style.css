@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #0b2f00;
+    --secondary-color: #004f21;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 20px;
+}
+
+header h1 {
+	color: var(--primary-color);
+}
+
+section {
+	margin-bottom: 30px;
+}
+
+.ausgabe {
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+
+h3 {
+	cursor: pointer;
+	color: var(--secondary-color);
+}
+
+.erklaerung {
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
